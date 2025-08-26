@@ -3,8 +3,13 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center text-center -mt-24 relative overflow-hidden bg-gray-50 dark:bg-slate-900">
+        <section 
+            id="home" 
+            className="min-h-screen w-full flex items-center justify-center text-center relative overflow-hidden bg-gray-50 dark:bg-slate-900"
+        >
+            {/* Animated background elements... */}
             <div className="absolute inset-0 z-0 overflow-hidden">
+                {/* Light mode background */}
                 <div className="absolute inset-0 dark:hidden bg-white">
                     <div className="absolute inset-0 h-full w-full bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:36px_36px]"></div>
                     <div className="absolute inset-0 mix-blend-multiply">
@@ -20,6 +25,7 @@ const HeroSection = () => {
                         />
                     </div>
                 </div>
+                {/* Dark mode background */}
                 <div className="absolute inset-0 hidden dark:block">
                      <div
                         className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-slate-900 to-slate-900"
@@ -48,7 +54,7 @@ const HeroSection = () => {
                 </div>
             </div>
             
-            <div className="z-10 relative">
+            <div className="z-10 relative px-6">
                 <motion.h1 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
