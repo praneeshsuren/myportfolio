@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Get the current path from the URL.
+      var path = window.location.pathname;
+
+      // If this is a custom domain, the segment index will be 0.
+      // For GitHub Pages project sites, it's 1.
+      var segment = 1; 
+
+      // Create a new URL that points to the index.html with the correct path.
+      var newUrl = window.location.protocol + '//' +
+                   window.location.hostname +
+                   (window.location.port ? ':' + window.location.port : '') +
+                   '/' + path.split('/').slice(0, 1 + segment).join('/') +
+                   '/?p=' + path.slice(1).split('/').slice(segment).join('/').replace(/&/g, '~and~') +
+                   '&q=' + window.location.search.slice(1).replace(/&/g, '~and~') +
+                   window.location.hash;
+
+      // Redirect to the new URL.
+      window.location.replace(newUrl);
+    </script>
+  </head>
+  <body>
+    If you are not redirected automatically, please click <a href="/">here</a>.
+  </body>
+</html>
