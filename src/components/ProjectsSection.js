@@ -6,18 +6,25 @@ import AnimatedSection from './AnimatedSection';
 const ProjectsSection = () => {
   const projects = [
     {
+      title: "NexChat – Chat Application",
+      description: "A real-time web chat application built with React, Java, Spring Boot, PostgreSQL and Asgardeo.",
+      tools: ["React", "Java", "PostgreSQL", "Spring Boot", "Asgardeo"],
+      github: "https://github.com/praneeshsuren/nexchat",
+      status: "Completed"
+    },
+    {
       title: "WanderLanka – Travel Planning Platform",
       description: "A comprehensive travel platform with booking, transport, and intelligent route planning features. I developed the Tour Guide module.",
       tools: ["React Native", "Node.js", "Express", "MongoDB", "Microservices"],
       github: "https://github.com/orgs/WanderLanka",
-      status: "Ongoing"
+      status: "Completed"
     },
     {
       title: "Vistara – Social Media Platform",
       description: "A social media application with posts, comments, and real-time user interactions, built with a mobile-first approach.",
       tools: ["Flutter", "Firebase", "Firestore", "Firebase Auth"],
       github: "https://github.com/praneeshsuren/vistara",
-      status: "Ongoing"
+      status: "Completed"
     },
     {
       title: "Kamper – Camping Goods & Site Booking",
